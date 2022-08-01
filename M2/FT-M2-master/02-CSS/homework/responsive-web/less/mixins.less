@@ -1,0 +1,22 @@
+// Mixins acá
+.redondear(@radius:25px){
+   border-radius: @radius;
+}
+
+.alineacionDatos(@flex:column){
+   display: flex;
+   flex-direction: @flex;
+}
+
+.botonRegistrarse(@par1, @par2){
+   background-color: @par1;
+   border-radius: @par2;
+   color: rgb(253, 253, 253);
+   border-color: black;
+   width: min-content;
+   padding: 1rem;
+   cursor: pointer;
+   &:hover {
+    background-color: orange;
+  }
+}

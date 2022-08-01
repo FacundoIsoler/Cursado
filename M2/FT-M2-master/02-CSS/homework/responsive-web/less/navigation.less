@@ -1,0 +1,19 @@
+// Código de Nav acá
+nav{
+    background-color: @nav-bg;
+    display: flex;
+    .alineacionDatos();// llama funcion de mixins.less
+    justify-content: center;
+    align-items: center;
+    ul{
+        align-items: center;
+        width: 30%;
+        justify-content: space-around;
+        .alineacionDatos(row);// llama funcion de mixins.less
+        a{
+            font-family: @nav-font;
+            font-size: large;
+            align-items: center;
+        }
+    }
+}
