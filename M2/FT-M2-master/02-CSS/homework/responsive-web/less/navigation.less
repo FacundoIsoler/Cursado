@@ -7,13 +7,19 @@ nav{
     align-items: center;
     ul{
         align-items: center;
-        width: 30%;
+        width: 100%;
         justify-content: space-around;
         .alineacionDatos(row);// llama funcion de mixins.less
         a{
             font-family: @nav-font;
             font-size: large;
             align-items: center;
+            @media @phone{
+                font-size: 100%;
+                justify-content: space-around;
+                .alineacionDatos(row);
+                padding: 0.5rem;
+            }
         }
     }
 }
