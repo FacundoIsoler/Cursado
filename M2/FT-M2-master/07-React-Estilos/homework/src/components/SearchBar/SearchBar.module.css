@@ -1,0 +1,29 @@
+
+
+.search{
+    position: absolute;
+    z-index: 1px;
+    top: 2rem;
+    right: 3rem;
+    border: 2px solid var(--border);
+    border-radius: 0.25rem;
+}
+
+.input{
+    background-color: rgb(24, 29, 24);
+    color: var(--text);
+    border-radius: 0.25rem;
+}
+
+.input::placeholder{
+    color: var(--text);
+}
+
+.input:focus{
+    outline: none;
+}
+
+.btn{
+    border: 2px solid var(--border);
+}
+
