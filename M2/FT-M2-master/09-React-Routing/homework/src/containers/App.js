@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-
 import './App.css';
 import Nav from '../components/Nav.jsx';
 import Cards from '../components/Cards.jsx';
+import About from '../components/About.jsx';
+import City from '../components/City';
+import {Route} from 'react-router-dom';
 
-const apiKey = 'Aqui va la API key que creaste';
+const apiKey = '5e9b6d70ef89e244f2ae83d1b84495c2';
 
 function App() {
   const [cities, setCities] = useState([]);
@@ -41,19 +43,17 @@ function App() {
     if(ciudad.length > 0) {
         return ciudad[0];
     } else {
-        return null;
+        return 'Ciudad no encontrada';
     }
   }
   return (
     <div className="App">
-      <Nav onSearch={onSearch}/>
-      <div>
-        <Cards
-          cities={cities}
-          onClose={onClose}
-        />
-      </div>
-      <hr />
+      <Route path= '/' render={() =>  <Nav onSearch={onSearch}/>}/>
+      <Route exact path='/' render={() => <Cards cities={cities} onClose={onClose}/>}/> 
+      <Route exact path= '/about' component={About}/>
+      <Route exact path= '/city/:ciudadId'> <City onFilter={onFilter}/></Route>
+
+      <hr /> 
     </div>
   );
 }
