@@ -5,7 +5,7 @@ import './Nav.css';
 
 function Nav({onSearch}) {
   return (
-    <div>Nav</div>
+    <SearchBar onSearch={onSearch}/>
   );
 };
 
